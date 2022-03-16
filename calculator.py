@@ -18,10 +18,11 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
             (...etc.)"""
 
+valid_signs = ['+', '-', '*', '/', 'square', 'cube', 'pow', 'mod']
+
 while True:
     answer = input(">")
     input_list = answer.split(' ')
-    num1 = int(input_list[1])
     if len(input_list) == 3:
         num2 = int(input_list[2])
     if input_list[0] == 'q':
