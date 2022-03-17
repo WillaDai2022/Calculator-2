@@ -18,13 +18,29 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
             (...etc.)"""
 
-valid_signs = ['+', '-', '*', '/', 'square', 'cube', 'pow', 'mod']
+def validate_input(input_list)
+    num_list = input_list.pop(0)
+    valid_operators = ['+', '-', '*', '/', 'square', 'cube', 'pow', 'mod']
+
+    index = 0
+
+    while index < len(num_list):
+        try:
+            int(num_list[index])
+            index += 1
+        except:
+            print("Enter valid numbers!")
+            index = 0
+
+    if input_list[0] not in valid_operators
+        print('enter a valid operator')
+
 
 while True:
     answer = input(">")
     input_list = answer.split(' ')
-    if len(input_list) == 3:
-        num2 = int(input_list[2])
+    validate_input(input_list)
+
     if input_list[0] == 'q':
         break
     elif input_list[0] == '+':
@@ -53,3 +69,6 @@ while True:
         print(result)
     else:
         print('please enter a valid request')
+
+
+def 
